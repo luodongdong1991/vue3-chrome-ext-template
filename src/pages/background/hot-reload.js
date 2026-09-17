@@ -9,7 +9,7 @@ async function refreshActiveTabAfterReload () {
   await chrome.storage.local.remove(RELOAD_PENDING_KEY)
   const [activeTab] = await chrome.tabs.query({ active: true, lastFocusedWindow: true })
 
-  if (activeTab?.id && /^https?:/.test(activeTab.url || '')) {
+  if (activeTab?.id) {
     await chrome.tabs.reload(activeTab.id)
   }
 }
@@ -24,6 +24,7 @@ function startHotReload () {
     if (reloading) return
 
     try {
+      await chrome.runtime.getPlatformInfo()
       const response = await fetch(`${chrome.runtime.getURL('hot-reload.json')}?t=${Date.now()}`)
       const { buildId } = await response.json()
 
@@ -41,3 +42,4 @@ function startHotReload () {
 }
 
 module.exports = { startHotReload }
+/* global chrome */
