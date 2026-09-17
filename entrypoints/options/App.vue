@@ -80,7 +80,10 @@ const tasks = [
 ]
 
 onMounted(async () => {
-  const settings = await browser.storage.local.get(['enabled', 'theme'])
+  const settings = await browser.storage.local.get(['enabled', 'theme']) as {
+    enabled?: boolean
+    theme?: string
+  }
   enabled.value = settings.enabled ?? true
   theme.value = settings.theme ?? 'light'
   try {

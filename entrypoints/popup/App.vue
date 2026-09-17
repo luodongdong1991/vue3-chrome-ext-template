@@ -27,7 +27,7 @@ import { browser } from 'wxt/browser'
 const enabled = ref(true)
 
 onMounted(async () => {
-  const value = await browser.storage.local.get('enabled')
+  const value = await browser.storage.local.get('enabled') as { enabled?: boolean }
   enabled.value = value.enabled ?? true
 })
 
