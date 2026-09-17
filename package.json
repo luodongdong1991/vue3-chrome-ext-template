@@ -1,25 +1,26 @@
 {
-  "name": "vue3-chrome-ext-template",
-  "version": "0.2.0",
+  "name": "wxt-vue3-element-plus-extension",
+  "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "vue-cli-service build --watch --mode development",
-    "build": "vue-cli-service build",
-    "lint": "eslint ."
+    "dev": "wxt",
+    "dev:firefox": "wxt -b firefox",
+    "build": "wxt build",
+    "build:firefox": "wxt build -b firefox",
+    "zip": "wxt zip",
+    "zip:firefox": "wxt zip -b firefox",
+    "compile": "vue-tsc --noEmit",
+    "postinstall": "wxt prepare"
   },
   "dependencies": {
-    "core-js": "^3",
-    "vue": "^3.5.34"
+    "element-plus": "^2.14.5",
+    "vue": "^3.5.42"
   },
   "devDependencies": {
-    "@babel/core": "^7.29.6",
-    "@babel/eslint-parser": "^7.28.6",
-    "@vue/cli-plugin-babel": "~5.0.9",
-    "@vue/cli-service": "~5.0.9",
-    "@vue/compiler-sfc": "^3.5.34",
-    "@vue/eslint-config-standard": "^9.0.1",
-    "copy-webpack-plugin": "^14.0.0",
-    "eslint": "^9.39.4",
-    "eslint-plugin-vue": "^10.9.1"
+    "@wxt-dev/module-vue": "^1.0.3",
+    "typescript": "^7.0.2",
+    "vue-tsc": "^3.3.11",
+    "wxt": "^0.21.4"
   }
 }
