@@ -1,0 +1,18 @@
+:root { font-family: Inter, "PingFang SC", "Microsoft YaHei", sans-serif; color: #1d2433; background: #f4f7fb; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+.popup-shell { width: 360px; padding: 20px; }
+.brand { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+.brand-mark { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 13px; color: white; font-size: 20px; font-weight: 800; background: linear-gradient(135deg, #409eff, #7667f5); box-shadow: 0 8px 20px rgb(64 158 255 / 28%); }
+.brand strong { display: block; font-size: 16px; }
+.brand p { margin: 3px 0 0; color: #8b95a7; font-size: 12px; }
+.brand .el-tag { margin-left: auto; }
+.status-card { display: flex; align-items: center; justify-content: space-between; padding: 16px; border: 1px solid #e7ebf2; border-radius: 14px; background: white; }
+.status-card span { font-size: 14px; font-weight: 650; }
+.status-card p { margin: 5px 0 0; color: #8b95a7; font-size: 12px; }
+.metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0 18px; }
+.metrics div { padding: 14px 16px; border-radius: 12px; background: #eef5ff; }
+.metrics strong, .metrics span { display: block; }
+.metrics strong { margin-bottom: 4px; font-size: 18px; }
+.metrics span { color: #7b8799; font-size: 12px; }
+.admin-button { width: 100%; }
