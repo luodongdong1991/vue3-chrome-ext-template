@@ -6,10 +6,10 @@
   </main>
 </template>
 
-<script>
-export default {
+<script setup>
+defineOptions({
   name: 'PopupPage'
-}
+})
 </script>
 
 <style scoped>

@@ -8,10 +8,10 @@
   </main>
 </template>
 
-<script>
-export default {
+<script setup>
+defineOptions({
   name: 'OptionsPage'
-}
+})
 </script>
 
 <style scoped>

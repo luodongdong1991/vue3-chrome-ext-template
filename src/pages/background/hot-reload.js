@@ -1,3 +1,5 @@
+/* global chrome */
+
 const RELOAD_PENDING_KEY = 'devHotReloadPending'
 const POLL_INTERVAL = 1000
 
@@ -14,7 +16,7 @@ async function refreshActiveTabAfterReload () {
   }
 }
 
-function startHotReload () {
+export function startHotReload () {
   let currentBuildId
   let reloading = false
 
@@ -40,6 +42,3 @@ function startHotReload () {
     }
   }, POLL_INTERVAL)
 }
-
-module.exports = { startHotReload }
-/* global chrome */
